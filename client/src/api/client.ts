@@ -5,6 +5,13 @@ const apiClient = axios.create({
   headers: { 'Content-Type': 'application/json' },
 })
 
+// Attach stored JWT to EVERY req so protected endpoints receive
+apiClient.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token')
+  if (token) config.headers.Authorization = `Bearer ${token}`
+  return config
+})
+
 if (import.meta.env.DEV) {
   apiClient.interceptors.request.use((config) => {
     console.info(`[api] -> ${config.method?.toUpperCase()} ${config.baseURL}${config.url}`, {

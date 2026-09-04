@@ -42,6 +42,39 @@
 .secondary:hover {
   background: #f4e8ce;
 }
+.secondaryButton {
+  display: block;
+  width: 100%;
+  height: 57px;
+  min-height: 56px;
+  border: 2px solid #6ba539;
+  border-radius: 12px;
+  background: #fff7e6;
+  color: #6ba539;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.secondaryButton:hover { background: #eef5e6; }
+
+/* Tertiary danger button (Profile "Delete account") */
+.tertiary {
+  display: block;
+  width: 100%;
+  height: 57px;
+  min-height: 56px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #c62828;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tertiary:hover { background: #f7ded5; }
 
 .guest {
   display: flex;
