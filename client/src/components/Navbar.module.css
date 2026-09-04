@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 85px;
+  padding: 40px 24px;
+  gap: 40px;
+  background: #fff7e6;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.navbar .brand { width: 104px; height: 33px; }
+.navbar .brand :global(.bar) { width: 104px; height: 33px; background: transparent; }
+.navbar .brand :global(.bar) { width: 104px; height: 33px; }
+.authBrandBar { justify-content: center; width: 100%; height: 64px; background: #fff7e6; }
+.dashboardNavbar { height: 85px; padding: 40px 24px; }
+.dashboardNavbar .brand :global(div) { background: transparent; }
+.account { position: relative; width: 48px; height: 48px; padding: 0; border: 0; background: transparent; }
+.accountHead { position: absolute; top: 10px; left: 19px; width: 10px; height: 10px; border: 2px solid #1b1b1b; border-radius: 50%; }
+.accountShoulders { position: absolute; bottom: 9px; left: 13px; width: 22px; height: 12px; border: 2px solid #1b1b1b; border-radius: 14px 14px 10px 10px; }
+
+@media (max-width: 760px) {
+  .navbar { height: 85px; padding: 40px 24px; }
+}

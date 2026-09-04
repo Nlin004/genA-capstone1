@@ -1,0 +1,24 @@
+.page {
+  min-height: calc(100vh - 85px);
+  padding: 40px 20px;
+  background: #fff7e6;
+}
+
+.content { width: min(420px, 100%); margin: 0 auto; }
+.header { display: flex; flex-direction: column; gap: 24px; }
+.breadcrumbs { display: flex; align-items: center; gap: 8px; color: #1b1b1b; font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 25px; }
+.breadcrumbs a { color: #6ba539; font-weight: 700; }
+.profileSection { display: flex; flex-direction: column; gap: 24px; }
+.profileSection h1 { margin: 0; color: #1b1b1b; font-family: 'Open Sans', sans-serif; font-size: 40px; font-weight: 700; line-height: 54px; }
+.form { display: flex; flex-direction: column; gap: 16px; }
+.deleteButton { height: 57px; min-height: 56px; border: 0; border-radius: 12px; background: transparent; color: #c62828; font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 700; }
+.deleteButton:hover { background: #f7ded5; }
+.overlay { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgb(0 0 0 / 50%); }
+.modal { display: flex; flex-direction: column; gap: 24px; width: min(345px, 100%); padding: 40px 16px 16px; border: 2px solid #b0b0b0; border-radius: 12px; background: #fff7e6; }
+.modalHeader { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+.modalHeader h2 { margin: 0; color: #1b1b1b; font-family: 'Open Sans', sans-serif; font-size: 20px; font-weight: 700; line-height: 27px; }
+.modalHeader p { margin: 0; color: #1b1b1b; font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 25px; }
+.modalActions { display: flex; flex-direction: column; gap: 8px; }
+.confirmButton, .cancelButton { height: 57px; min-height: 56px; border-radius: 12px; font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 700; }
+.confirmButton { border: 0; background: #6ba539; color: #fff; }
+.cancelButton { border: 2px solid #6ba539; background: #fff7e6; color: #6ba539; }

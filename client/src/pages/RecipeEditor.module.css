@@ -1,0 +1,4 @@
+.page { min-height: calc(100vh - 85px); padding: 40px 20px 100px; background: #fff7e6; }
+.content { width: min(420px, 100%); margin: 0 auto; }
+.eyebrow { margin: 0 0 8px; color: #6ba539; font: 700 12px/16px 'Open Sans', sans-serif; text-transform: uppercase; }
+.content h1 { margin: 0 0 40px; color: #1b1b1b; font: 700 40px/54px 'Open Sans', sans-serif; }

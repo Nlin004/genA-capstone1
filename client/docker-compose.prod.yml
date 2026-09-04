@@ -1,0 +1,9 @@
+services:
+  client-build:
+    build:
+      context: ./
+      dockerfile: Dockerfile.build
+    command: sh -c "npm ci && npm run build"
+    volumes:
+      - ./:/app # mount your app into /app
+      - /app/node_modules # keep node_modules inside the container

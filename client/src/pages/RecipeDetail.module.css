@@ -1,0 +1,10 @@
+.page { min-height: calc(100vh - 85px); padding: 40px 20px 100px; background: #fff7e6; }
+.content { width: min(420px, 100%); margin: 0 auto; }
+.back, .eyebrow { color: #6ba539; font: 700 14px/19px 'Open Sans', sans-serif; }
+.image { width: 100%; height: 230px; margin: 24px 0; border-radius: 12px; object-fit: cover; }
+.content h1 { margin: 0 0 16px; color: #1b1b1b; font: 700 40px/54px 'Open Sans', sans-serif; }
+.description, .content li { color: #1b1b1b; font: 400 18px/25px 'Open Sans', sans-serif; }
+.content h2 { margin: 32px 0 12px; color: #1b1b1b; font: 700 20px/27px 'Open Sans', sans-serif; }
+.content ul, .content ol { padding-left: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags span { padding: 6px 16px; border-radius: 12px; background: #fbeabf; color: #866208; font: 14px/19px 'Open Sans', sans-serif; }

@@ -3,6 +3,7 @@ const Recipe = require("../models/recipe");
 module.exports = {
   create,
   getAll,
+  getMine,
   getOne,
   update,
   delete: deleteOne,
@@ -14,7 +15,7 @@ module.exports = {
 async function addInstruction(req, res) {
   try {
     const recipe = await Recipe.findById(req.params.id);
-    if (recipe.ownerId.toString() !== req.user._id) {
+    if (String(recipe.ownerId) !== String(req.user._id)) {
       return res.status(403).json({ message: "Unauthorized" });
     }
     recipe.instructions.push(req.body);
@@ -28,7 +29,7 @@ async function addInstruction(req, res) {
 async function updateInstruction(req, res) {
   try {
     const recipe = await Recipe.findById(req.params.id);
-    if (recipe.ownerId.toString() !== req.user._id) {
+    if (String(recipe.ownerId) !== String(req.user._id)) {
       return res.status(403).json({ message: "Unauthorized" });
     }
     const instruction = recipe.instructions.id(req.params.instructionId);
@@ -43,7 +44,7 @@ async function updateInstruction(req, res) {
 async function deleteInstruction(req, res) {
   try {
     const recipe = await Recipe.findById(req.params.id);
-    if (recipe.ownerId.toString() !== req.user._id) {
+    if (String(recipe.ownerId) !== String(req.user._id)) {
       return res.status(403).json({ message: "Unauthorized" });
     }
     recipe.instructions.id(req.params.instructionId).remove();
@@ -84,6 +85,15 @@ async function getAll(req, res) {
   }
 }
 
+async function getMine(req, res) {
+  try {
+    const recipes = await Recipe.find({ ownerId: req.user._id });
+    res.json(recipes);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 async function getOne(req, res) {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -102,7 +112,7 @@ async function update(req, res) {
     if (recipe == null) {
       return res.status(404).json({ message: "Cannot find recipe" });
     }
-    if (recipe.ownerId.toString() !== req.user._id) {
+    if (String(recipe.ownerId) !== String(req.user._id)) {
       return res.status(403).json({ message: "Unauthorized" });
     }
     const updatedRecipe = await Recipe.findByIdAndUpdate(

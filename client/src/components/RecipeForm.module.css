@@ -1,0 +1,10 @@
+.form { display: flex; flex-direction: column; gap: 16px; }
+.form label { display: flex; flex-direction: column; gap: 8px; color: #3d3d3d; font: 700 18px/25px 'Open Sans', sans-serif; }
+.form label span { color: #707070; font: 400 12px/16px 'Open Sans', sans-serif; }
+.form input, .form textarea { width: 100%; padding: 8px 12px; border: 2px solid #707070; border-radius: 12px; background: #fff; color: #1b1b1b; font: 400 16px/22px 'Open Sans', sans-serif; }
+.form input { height: 56px; }
+.form textarea { min-height: 100px; resize: vertical; }
+.form input:focus, .form textarea:focus { outline: 2px solid #6ba539; outline-offset: 2px; }
+.form button { height: 57px; border: 0; border-radius: 12px; background: #6ba539; color: #fff; font: 700 18px/25px 'Open Sans', sans-serif; }
+.form button:hover { background: #96cc67; }
+.error { margin: 0; color: #c62828; font: 14px/19px 'Open Sans', sans-serif; }
